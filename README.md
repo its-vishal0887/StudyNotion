@@ -19,16 +19,16 @@ A React + Vite education landing page and authentication flow prototype.
 <!-- Add your screenshots to a `screenshots` folder in the root directory and update the paths below -->
 
 ### Home Page
-![Home Page Placeholder](screenshots/home.png)
+![Home Page Placeholder](screenshots/home.png.png)
 
 ### Login Page
-![Login Page Placeholder](screenshots/login.png)
+![Login Page Placeholder](screenshots/login.png.png)
 
 ### Signup Page
-![Signup Page Placeholder](screenshots/signup.png)
+![Signup Page Placeholder](screenshots/signup.png.png)
 
 ### Dashboard
-![Dashboard Placeholder](screenshots/dashboard.png)
+![Dashboard Placeholder](screenshots/dashboard.png.png)
 
 ## Current project status
 
