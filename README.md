@@ -14,6 +14,22 @@ A React + Vite education landing page and authentication flow prototype.
 - Tailwind CSS support installed and configured via `@tailwindcss/vite`
 - ESLint setup for linting the React codebase
 
+## Screenshots
+
+<!-- Add your screenshots to a `screenshots` folder in the root directory and update the paths below -->
+
+### Home Page
+![Home Page Placeholder](screenshots/home.png)
+
+### Login Page
+![Login Page Placeholder](screenshots/login.png)
+
+### Signup Page
+![Signup Page Placeholder](screenshots/signup.png)
+
+### Dashboard
+![Dashboard Placeholder](screenshots/dashboard.png)
+
 ## Current project status
 
 ### Completed
