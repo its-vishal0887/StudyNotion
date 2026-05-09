@@ -7,6 +7,7 @@ const SignUpForm = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
 
   const [ShowPassword, setShowPassword] = useState(false);
+  const [ShowCnf, setShowCnf] = useState(false)
   const [FormData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -40,100 +41,107 @@ const SignUpForm = ({ setIsLoggedIn }) => {
 
   return (
     <div>
-      <div>
+      <div >
         <button>Student</button>
         <button>Instructor</button>
       </div>
 
       <form onSubmit={submitHandler}>
-        <div>
+        <div className="flex w-full justify-between gap-5">
           <label>
-            <p>
-              First Name<sup>*</sup>{" "}
+            <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+              First Name<sup className="text-pink-200">*</sup>{" "}
             </p>
             <input
               type="text"
+              className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-1 border-richblack-100"
               required
               name="firstName"
               onChange={changeHandler}
-              placeholder="Enter First Name : "
+              placeholder="Enter First Name"
               value={FormData.firstName}
             />
           </label>
 
           <label>
-            <p>
-              Last Name<sup>*</sup>{" "}
+            <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+              Last Name<sup className="text-pink-200">*</sup>{" "}
             </p>
             <input
               type="text"
               required
               name="lastName"
+              className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-1 border-richblack-100"
               onChange={changeHandler}
-              placeholder="Enter Last Name : "
+              placeholder="Enter Last Name"
               value={FormData.lastName}
             />
           </label>
         </div>
 
         <label>
-          <p>
-            Email<sup>*</sup>{" "}
+          <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+            Email<sup className="text-pink-200">*</sup>{" "}
           </p>
           <input
             type="email"
             required
             name="email"
+            className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-1 border-richblack-100"
             onChange={changeHandler}
-            placeholder="Enter Email : "
+            placeholder="Enter Email"
             value={FormData.email}
           />
         </label>
 
-        <div>
-          <label>
-            <p>
-              Create Password<sup>*</sup>{" "}
+        <div className="flex w-full justify-evenly gap-x-10">
+          <label className="relative w-full">
+            <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+              Create Password<sup className="text-pink-200">*</sup>{" "}
             </p>
             <input
               type={ShowPassword ? "text" : "password"}
               required
               name="password"
+              className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-1 border-richblack-100"
               onChange={changeHandler}
-              placeholder="Create Password "
+              placeholder="Create Password"
               value={FormData.password}
             />
             <span
               onClick={() => {
                 setShowPassword((prev) => !prev);
               }}
+              className="absolute right-3 top-[38px] cursor-pointer text-white"
             >
-              {ShowPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+              {ShowPassword ? <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF"  /> : <AiOutlineEye fontSize={24} fill="#AFB2BF"  />}
             </span>
           </label>
-          <label>
-            <p>
-              Confirm Password<sup>*</sup>{" "}
+          <label className="relative w-full gap-x-6">
+            <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+              Confirm Password<sup className="text-pink-200">*</sup>{" "}
             </p>
             <input
-              type={ShowPassword ? "text" : "password"}
+              type={ShowCnf ? "text" : "password"}
               required
               name="cnfPassword"
               onChange={changeHandler}
               placeholder="Confirm Password "
+              className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-1 border-richblack-100"
               value={FormData.cnfPassword}
             />
             <span
               onClick={() => {
-                setShowPassword((prev) => !prev);
+                setShowCnf((prev) => !prev);
               }}
+              className="absolute right-3 top-[38px] cursor-pointer text-white"
             >
-              {ShowPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+              {ShowCnf ? <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF"  /> : <AiOutlineEye fontSize={24} fill="#AFB2BF"  />}
             </span>
           </label>
         </div>
 
-        <button>Create Account</button>
+        <button className="w-full flex justify-center items-center rounded-[8px] font-medium text-black border border-richblack-100 px-[12px] py-[8px] gap-x-2 mt-6 bg-yellow-300 cursor-pointer">Create Account</button>
       </form>
     </div>
   );
